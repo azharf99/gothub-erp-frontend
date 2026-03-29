@@ -1,0 +1,14 @@
+# Mengizinkan semua bot mesin pencari
+User-agent: *
+
+# HALAMAN YANG BOLEH DIINDEKS
+Allow: /$
+Allow: /pendaftaran
+Allow: /login
+
+# HALAMAN YANG DILARANG KERAS DIINDEKS (Keamanan ERP)
+Disallow: /dashboard/
+Disallow: /api/
+
+# Lokasi sitemap (Jika nanti kamu membuat landing page publik yang panjang)
+# Sitemap: https://erp.azharfa.cloud/sitemap.xml

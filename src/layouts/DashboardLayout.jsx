@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
-// Gunakan ikon dari heroicons (npm install @heroicons/react)
+import { Helmet } from 'react-helmet-async';
+
 import { 
     HomeIcon, BookOpenIcon, UsersIcon, AcademicCapIcon, 
     ArrowLeftOnRectangleIcon, BellIcon, Bars3Icon, ChevronDoubleLeftIcon, ChevronDoubleRightIcon
@@ -29,6 +30,14 @@ export default function DashboardLayout() {
     };
 
     return (
+
+        <>
+        <Helmet>
+            <title>Dashboard | Gothub ERP</title>
+            <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
+
+        
         <div className="flex h-screen bg-gray-50 overflow-hidden">
             
             {/* OVERLAY UNTUK MOBILE */}
@@ -147,5 +156,6 @@ export default function DashboardLayout() {
                 </main>
             </div>
         </div>
+        </>
     );
 }

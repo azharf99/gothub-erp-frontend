@@ -11,3 +11,9 @@ export const getProfile = async () => {
     const response = await api.get('/profile');
     return response.data;
 };
+
+export const registerStudent = async (userData) => {
+    // userData berisi { nama, email, password }
+    const response = await api.post('/register', userData);
+    return response.data;
+};

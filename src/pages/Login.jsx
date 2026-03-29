@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginUser } from '../services/auth'; // Pastikan path sesuai
+import { loginUser } from '../services/auth';
+import { Helmet } from 'react-helmet-async';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -42,6 +43,14 @@ export default function Login() {
     };
 
     return (
+        <>
+        
+        <Helmet>
+            <title>Masuk | Gothub ERP</title>
+            <meta name="description" content="Silakan masuk ke akun Gothub ERP Anda untuk mengelola sistem akademik." />
+            <link rel="canonical" href="https://erp.domainkamu.com/login" />
+        </Helmet>
+
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <div className="w-full max-w-md p-8 bg-white rounded-xl shadow-lg">
                 <div className="text-center mb-8">
@@ -89,5 +98,6 @@ export default function Login() {
                 </form>
             </div>
         </div>
+        </>
     );
 }
