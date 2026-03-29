@@ -13,17 +13,6 @@ export default defineConfig({
     threshold: 10240,  // Minimum file size in bytes to compress (e.g., 10KB)
     deleteOriginalAssets: false, // Optional: delete original uncompressed assets
   }),],
-  build: {
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-      },
-      format: {
-        comments: false,
-      },
-    },
-  },
   server: {
     proxy: {
       '/api': {
